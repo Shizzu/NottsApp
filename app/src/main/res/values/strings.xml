@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">NottsPark</string>
+    <string name="title_activity_main">NottsPark</string>
+    <string name="google_maps_key">AIzaSyBK4fUWbEoDTG_gnbFVYjFzS7IQiyJBSP8</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="parker">Parker</string>
+    <string name="leaver">Leaver</string>
+    <string name="login">Login</string>
+    <string-array name="minute_array">
+        <item>Now</item>
+        <item>10 Minutes</item>
+        <item>20 Minutes</item>
+        <item>30 Minutes</item>
+        <item>40 Minutes</item>
+        <item>1 Hour</item>
+    </string-array>
+
+    <string-array name="acc_type_array">
+        <item>Student</item>
+        <item>Staff</item>
+    </string-array>
+
+    <string-array name="vehicle_brand_array">
+        <item>Alfa Romeo</item>
+        <item>Aston Martin</item>
+        <item>Audi</item>
+        <item>Bentley</item>
+        <item>BMW</item>
+        <item>Bufori</item>
+        <item>Caterham</item>
+        <item>Chana</item>
+        <item>Chery</item>
+        <item>Chevrolet</item>
+        <item>Citroen</item>
+        <item>Ferrari</item>
+        <item>Fiat</item>
+        <item>Ford</item>
+        <item>Haval</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Infiniti</item>
+        <item>Isuzu</item>
+        <item>Jaguar</item>
+        <item>Jeep</item>
+        <item>Kia</item>
+        <item>Lamborghini</item>
+        <item>Land Rover</item>
+        <item>Lexus</item>
+        <item>Lotus</item>
+        <item>Mahindra</item>
+        <item>Maserati</item>
+        <item>Maxus</item>
+        <item>Mazda</item>
+        <item>McLaren</item>
+        <item>Mercedes-Benz</item>
+        <item>MINI</item>
+        <item>Mitsubishi</item>
+        <item>Nissan</item>
+        <item>Perodua</item>
+        <item>Peugeot</item>
+        <item>Porsche</item>
+        <item>Proton</item>
+        <item>Renault</item>
+        <item>Rolls-Royce</item>
+        <item>Skoda</item>
+        <item>SsangYong</item>
+        <item>Subaru</item>
+        <item>Suzuki</item>
+        <item>Tata</item>
+        <item>Toyota</item>
+        <item>Volkswagen</item>
+        <item>Volvo</item>
+    </string-array>
+
+    <!-- Strings related to login -->
+    <string name="title_activity_login">Sign in</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="add_vehicle">+ Add Vehicle</string>
+    <string name="register">Register</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password_reconfirm">Type the password again</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="dialog_log_out">Logged out from NottsPark</string>
+    <string name="okay">OK</string>
+
+</resources>

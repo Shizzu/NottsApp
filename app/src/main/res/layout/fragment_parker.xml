@@ -1,0 +1,86 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:text="Please fill in the following details"-->
+        <!--android:textColor="@color/primarycolor"-->
+        <!--android:textStyle="normal|bold" />-->
+
+        <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="2dip"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@color/primarycolor" />-->
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Building"
+            android:textColor="@color/primarycolor"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:id="@+id/parkerBuilding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:hint="For example: Blue Building" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Make"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Model"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Plate"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/btnSearchLeaver"
+            style="@style/Material.Drawable.Ripple.Touch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/primarycolor"
+            android:elevation="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Search Leaver"
+            android:textColor="@android:color/white"
+            app:rd_enable="true" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:text="Please fill in the following details"-->
+        <!--android:textColor="@color/teal500"-->
+        <!--android:textStyle="normal|bold" />-->
+
+        <!--<View-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="2dip"-->
+        <!--android:layout_marginBottom="15dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@color/teal500" />-->
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Building"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:id="@+id/leaverBuilding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:hint="For example: Blue Building" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Make"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Model"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Car Plate"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:layout_marginBottom="15dp"
+            android:background="@color/teal500" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Leaving Time"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <com.rey.material.widget.Button
+                android:id="@+id/btnTimeNow"
+                style="@style/Material.Drawable.Ripple.Touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/green500"
+                android:elevation="2dp"
+                android:padding="5dp"
+                android:text="Now"
+                android:textColor="@color/white"
+                app:rd_enable="true" />
+
+            <com.rey.material.widget.Button
+                android:id="@+id/btnTimeafter10"
+                style="@style/Material.Drawable.Ripple.Touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/amber500"
+                android:elevation="2dp"
+                android:padding="5dp"
+                android:text="10min Later"
+                android:textColor="@color/white"
+                app:rd_enable="true" />
+
+            <com.rey.material.widget.Button
+                android:id="@+id/btnTimepicker"
+                style="@style/Material.Drawable.Ripple.Touch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/colorAccent"
+                android:elevation="2dp"
+                android:padding="5dp"
+                android:text="Pick time"
+                android:textColor="@color/white"
+                app:rd_enable="true" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="@color/teal500"
+            android:textStyle="normal|bold" />
+
+        <EditText
+            android:id="@+id/leaverDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-10dp"
+            android:gravity="top|left"
+            android:hint="For example: At the corner"
+            android:inputType="textMultiLine"
+            android:lines="2"
+            android:maxLines="2"
+            android:minLines="1"
+            android:scrollbars="vertical" />
+
+        <com.rey.material.widget.Button
+            android:id="@+id/btnLeave"
+            style="@style/Material.Drawable.Ripple.Touch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginLeft="2dp"
+            android:background="@color/teal500"
+            android:elevation="2dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Leave"
+            android:textColor="@android:color/white"
+            app:rd_enable="true" />
+    </LinearLayout>
+
+
+</ScrollView>
