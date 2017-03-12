@@ -25,8 +25,8 @@ import getresult.example.asus.nottspark.R;
 public class LeaverFragment extends Fragment {
 
 
-    EditText new_building, new_desc;
-    Spinner new_vehicle;
+    private EditText new_building, new_desc;
+    private Spinner new_vehicle;
     private FragmentActivity myContext;
 
     public LeaverFragment() {
@@ -53,28 +53,28 @@ public class LeaverFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leaver, container, false);
 
-        final NottsParkDatabase db = new NottsParkDatabase(getActivity(), null, null, 1);
-        new_building = (EditText) view.findViewById(R.id.leaverBuilding);
+//        final NottsParkDatabase db = new NottsParkDatabase(getActivity(), null, null, 1);
+//        new_building = (EditText) view.findViewById(R.id.leaverBuilding);
 //        new_vehicle = (Spinner) view.findViewById(R.id.leaverSpinner);
-        new_desc = (EditText) view.findViewById(R.id.leaverDescription);
-
-        final Button button = (Button) view.findViewById(R.id.btnTimepicker);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                showTimePickerDialog();
-            }
-        });
-
-        Button leaveButton = (Button) view.findViewById(R.id.btnLeave);
-        leaveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String temp_building = new_building.getText().toString();
-                String temp_vehicle = new_vehicle.getSelectedItem().toString();
-                String temp_desc = new_desc.getText().toString();
-                //db.addLeaver(new Leaver(1,1,));
-            }
-        });
+//        new_desc = (EditText) view.findViewById(R.id.leaverDescription);
+//
+//        final Button button = (Button) view.findViewById(R.id.btnTimepicker);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                showTimePickerDialog();
+//            }
+//        });
+//
+//        Button leaveButton = (Button) view.findViewById(R.id.btnLeave);
+//        leaveButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String temp_building = new_building.getText().toString();
+//                String temp_vehicle = new_vehicle.getSelectedItem().toString();
+//                String temp_desc = new_desc.getText().toString();
+//                //db.addLeaver(new Leaver(1,1,));
+//            }
+//        });
         return view;
     }
 

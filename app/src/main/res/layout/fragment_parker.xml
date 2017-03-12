@@ -9,22 +9,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--<TextView-->
-        <!--android:id="@+id/textView2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:text="Please fill in the following details"-->
-        <!--android:textColor="@color/primarycolor"-->
-        <!--android:textStyle="normal|bold" />-->
-
-        <!--<View-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="2dip"-->
-        <!--android:layout_marginBottom="15dp"-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:background="@color/primarycolor" />-->
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
@@ -40,32 +24,26 @@
             android:layout_marginTop="-10dp"
             android:hint="For example: Blue Building" />
 
-        <TextView
-            android:id="@+id/textView8"
+        <EditText
+            android:id="@+id/parkerCarMake"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Make"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
+            android:layout_marginTop="-10dp"
+            android:hint="Car Make" />
 
-        <TextView
-            android:id="@+id/textView9"
+        <EditText
+            android:id="@+id/parkerCarModel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Model"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
+            android:layout_marginTop="-10dp"
+            android:hint="Car Model" />
 
-        <TextView
-            android:id="@+id/textView10"
+        <EditText
+            android:id="@+id/parkerCarPlate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Plate"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
+            android:layout_marginTop="-10dp"
+            android:hint="Car Plate" />
 
         <com.rey.material.widget.Button
             android:id="@+id/btnSearchLeaver"
