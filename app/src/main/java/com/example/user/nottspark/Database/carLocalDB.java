@@ -2,10 +2,14 @@ package com.example.user.nottspark.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.user.nottspark.Model.Car;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class carLocalDB extends SQLiteOpenHelper {
 
@@ -60,12 +64,38 @@ public class carLocalDB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_CAR_ID, car.getCarID()); // User ID
+        //values.put(KEY_CAR_ID, car.getCarID()); // User ID
         values.put(KEY_CAR_MAKE, car.getCarMake()); // Username
         values.put(KEY_CAR_MODEL, car.getCarModel()); // User's Name
         values.put(KEY_CAR_PLATE, car.getCarPlate()); // User Contact Number
 
         db.insert(TABLE_CAR, null, values);
         db.close();
+    }
+
+    // Getting All Users
+    public List<Car> getAllCars() {
+        List<Car> carList = new ArrayList<>();
+        String selectQuery = "SELECT * FROM " + TABLE_CAR;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                Car car = new Car();
+                car.setCarID(Integer.parseInt(cursor.getString(0)));
+                car.setCarMake(cursor.getString(1));
+                car.setCarModel(cursor.getString(2));
+                car.setCarPlate(cursor.getString(3));
+
+                carList.add(car);
+            } while (cursor.moveToNext());
+        }
+        return carList;
+    }
+
+    public void deleteAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_CAR,null,null);
     }
 }

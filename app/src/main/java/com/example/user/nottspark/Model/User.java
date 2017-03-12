@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 // Account (Credentials) and Profile (Account Holder's Information) Combined
 public class User {
-    private static int ttlUser;
+    public static int ttlUser;
     private int userID;
     private String userUsername;
     private String userName;

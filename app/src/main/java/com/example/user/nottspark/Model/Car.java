@@ -5,6 +5,7 @@ package com.example.user.nottspark.Model;
  */
 
 public class Car {
+    public static int ttlCar;
     private int carID;
     private String carMake;
     private String carModel;
@@ -32,7 +33,7 @@ public class Car {
         return carMake;
     }
 
-    public void setCarMake(String carPlate) {
+    public void setCarMake(String carMake) {
         this.carMake = carMake;
     }
 

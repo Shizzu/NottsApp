@@ -106,7 +106,7 @@ public class NottsParkDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(KEY_USER_ID, user.getUserID()); // User ID
+        //values.put(KEY_USER_ID, user.getUserID()); // User ID
         values.put(KEY_USER_USERNAME, user.getUserUsername()); // Username
         values.put(KEY_USER_NAME, user.getUserName()); // User's Name
         values.put(KEY_USER_CONTACTNUM, user.getUserContactNum()); // User Contact Number
@@ -176,4 +176,9 @@ public class NottsParkDatabase extends SQLiteOpenHelper {
 
     // END /////////////////////////////////////////////////////////////////////////////////////////////
 
+    public void deleteAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_USER,null,null);
+        db.delete(TABLE_LEAVER,null,null);
+    }
 }

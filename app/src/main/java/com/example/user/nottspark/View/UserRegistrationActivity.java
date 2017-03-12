@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.example.user.nottspark.Database.NottsParkDatabase;
+import com.example.user.nottspark.Database.carLocalDB;
+import com.example.user.nottspark.Model.Car;
 import com.example.user.nottspark.Model.User;
 
 import java.util.Objects;
@@ -17,7 +20,8 @@ import getresult.example.asus.nottspark.R;
 
 public class UserRegistrationActivity extends AppCompatActivity {
 
-    private EditText mUsernameField, mPasswordField, mPasswordVerifyField, mName, mPhone, mContact, mEmail;
+    private EditText mUsernameField, mPasswordField, mPasswordVerifyField, mName, mContact, mEmail, mCarModel, mCarPlate;
+    private Spinner mAccType, mCarMake;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,16 +29,21 @@ public class UserRegistrationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_registration);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final NottsParkDatabase db = new NottsParkDatabase(this); // new object DBHandlerCreds
+        final NottsParkDatabase db = new NottsParkDatabase(this);
+        final carLocalDB db_car = new carLocalDB(this);
 
         mUsernameField = (EditText) findViewById(R.id.username);
         mPasswordField = (EditText) findViewById(R.id.password);
         mPasswordVerifyField = (EditText) findViewById(R.id.passwordReconfirm);
+        mAccType = (Spinner) findViewById(R.id.accTypeReg);
 
         mName = (EditText) findViewById(R.id.accName);
-        mPhone = (EditText) findViewById(R.id.contactNum);
-        mContact = (EditText) findViewById(R.id.contactNum); // layout have to change in UI
-        mEmail = (EditText) findViewById(R.id.regEmail); // layout have to change in UI
+        mContact = (EditText) findViewById(R.id.contactNum);
+        mEmail = (EditText) findViewById(R.id.regEmail);
+
+        mCarMake = (Spinner) findViewById(R.id.carMakeReg);
+        mCarModel = (EditText) findViewById(R.id.carModelReg);
+        mCarPlate = (EditText) findViewById(R.id.carPlateReg);
 
         Button mSignUp = (Button) findViewById(R.id.addUser);
         mSignUp.setOnClickListener(new View.OnClickListener() {
@@ -43,14 +52,19 @@ public class UserRegistrationActivity extends AppCompatActivity {
                 String new_username = mUsernameField.getText().toString();
                 String new_pw = mPasswordField.getText().toString();
                 String new_pw_verify = mPasswordVerifyField.getText().toString();
+                String new_accType = mAccType.getSelectedItem().toString();
 
                 String new_name = mName.getText().toString();
-                String new_phone = mPhone.getText().toString();
-                String new_email = mContact.getText().toString();
-                String new_accType = mEmail.getText().toString();
+                String new_contact = mContact.getText().toString();
+                String new_email = mEmail.getText().toString();
+
+                String new_car_make = mCarMake.getSelectedItem().toString();
+                String new_car_model = mCarModel.getText().toString();
+                String new_car_plate = mCarPlate.getText().toString();
 
                 if (Objects.equals(new_pw, new_pw_verify)) {
-                    db.addUser(new User(1, new_username, new_name, new_phone, new_email, new_accType, new_pw));
+                    db.addUser(new User(1,new_username, new_name, new_contact, new_email, new_accType, new_pw));
+                    db_car.addCar(new Car(1,new_car_make, new_car_model, new_car_plate));
                 }
             }
         });
