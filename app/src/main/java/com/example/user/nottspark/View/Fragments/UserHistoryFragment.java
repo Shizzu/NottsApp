@@ -115,17 +115,19 @@ public class UserHistoryFragment extends Fragment {
     private void initDataset() {
         mDataset = new Leaver[DATASET_COUNT];
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy h:mm:ss a");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf2 = new SimpleDateFormat("h:mm:ss a");
         String formattedDate = sdf.format(date);
+        String formattedTime = sdf2.format(date);
         Car car1 = new Car(6001, "Proton", "Saga", "CAD 2035");//testing please delete
         SpecificLocation sl = new SpecificLocation(30001, "Faculty of Science and Faculty of Engineering", "Blue", "Near Blue Building", "file:///android_asset/bbparking");//testing please delete
         User user1 = new User(20002,"admin2012", "Admin", "0124547896", "admin@ne.com", car1,"05/01/2017 3:00pm", "Student", "root");//testing please delete
-        mDataset[0] = new Leaver(10001, formattedDate, user1, sl, "Taken");
-        mDataset[1] = new Leaver(10002, formattedDate, user1, sl, "Not Taken");
-        mDataset[2] = new Leaver(10003, formattedDate, user1, sl, "Waiting");
-        mDataset[3] = new Leaver(10004, formattedDate, user1, sl, "Taken");
-        mDataset[4] = new Leaver(10005, formattedDate, user1, sl, "Taken");
-        mDataset[5] = new Leaver(10006, formattedDate, user1, sl, "Taken");
+        mDataset[0] = new Leaver(10001, formattedDate,formattedTime, user1, sl, "Taken");
+        mDataset[1] = new Leaver(10002, formattedDate,formattedTime, user1, sl, "Not Taken");
+        mDataset[2] = new Leaver(10003, formattedDate,formattedTime, user1, sl, "Waiting");
+        mDataset[3] = new Leaver(10004, formattedDate,formattedTime, user1, sl, "Taken");
+        mDataset[4] = new Leaver(10005, formattedDate,formattedTime, user1, sl, "Taken");
+        mDataset[5] = new Leaver(10006, formattedDate,formattedTime, user1, sl, "Taken");
 
     }
     private enum LayoutManagerType {
