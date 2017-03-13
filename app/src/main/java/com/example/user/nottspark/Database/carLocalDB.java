@@ -94,8 +94,8 @@ public class carLocalDB extends SQLiteOpenHelper {
         return carList;
     }
 
-    public void deleteAll(){
+    public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_CAR,null,null);
+        db.delete(TABLE_CAR, null, null);
     }
 }

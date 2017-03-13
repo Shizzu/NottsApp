@@ -10,8 +10,6 @@ import android.widget.Spinner;
 
 import com.example.user.nottspark.Database.NottsParkDatabase;
 import com.example.user.nottspark.Database.carLocalDB;
-import com.example.user.nottspark.Model.Car;
-import com.example.user.nottspark.Model.User;
 
 import java.util.Objects;
 

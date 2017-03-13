@@ -178,9 +178,9 @@ public class NottsParkDatabase extends SQLiteOpenHelper {
 
     // END /////////////////////////////////////////////////////////////////////////////////////////////
 
-    public void deleteAll(){
+    public void deleteAll() {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(TABLE_USER,null,null);
-        db.delete(TABLE_LEAVER,null,null);
+        db.delete(TABLE_USER, null, null);
+        db.delete(TABLE_LEAVER, null, null);
     }
 }

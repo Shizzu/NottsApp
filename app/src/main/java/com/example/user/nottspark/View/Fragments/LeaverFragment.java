@@ -11,12 +11,12 @@ import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
-import com.example.user.nottspark.Database.NottsParkDatabase;
+import com.example.user.nottspark.Model.User;
+import com.example.user.nottspark.View.ViewerPage.MainActivity;
 
 import java.util.Calendar;
 
@@ -24,24 +24,28 @@ import getresult.example.asus.nottspark.R;
 
 public class LeaverFragment extends Fragment {
 
-
+    private User user;
     private EditText new_building, new_desc;
     private Spinner new_vehicle;
     private FragmentActivity myContext;
+    OnHeadlineSelectedListener mCallback;
 
+    // Container Activity must implement this interface
+    public interface OnHeadlineSelectedListener {
+        public void onArticleSelected(int position);
+    }
     public LeaverFragment() {
     }
-
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);user = MainActivity.getUserinfo();
+    }
     @Override
     public void onAttach(Activity activity) {
         myContext = (FragmentActivity) activity;
         super.onAttach(activity);
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
 
     public void showTimePickerDialog() {
         DialogFragment newFragment = new TimePickerFragment();
@@ -49,10 +53,18 @@ public class LeaverFragment extends Fragment {
     }
 
     @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            user = (User) (bundle.getSerializable("userinfo"));
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_leaver, container, false);
-
 //        final NottsParkDatabase db = new NottsParkDatabase(getActivity(), null, null, 1);
 //        new_building = (EditText) view.findViewById(R.id.leaverBuilding);
 //        new_vehicle = (Spinner) view.findViewById(R.id.leaverSpinner);

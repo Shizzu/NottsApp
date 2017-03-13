@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:scaleType="centerCrop"
-        card_view:srcCompat="@drawable/kapashallmap" />
+        card_view:srcCompat="@drawable/bbparking" />
 
     <!-- Used for the ripple effect on touch -->
     <LinearLayout

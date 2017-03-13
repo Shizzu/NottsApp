@@ -1,10 +1,7 @@
 package com.example.user.nottspark.Model;
 
 import java.io.Serializable;
-import java.security.Timestamp;
-import java.util.ArrayList;
 
-// Account (Credentials) and Profile (Account Holder's Information) Combined
 public class User implements Serializable {
     private int userID;
     private String userUsername;

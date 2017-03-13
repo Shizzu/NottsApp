@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.example.user.nottspark.Model.User;
 import com.example.user.nottspark.View.AddVehicleActivity;
+import com.example.user.nottspark.View.ViewerPage.MainActivity;
 import com.rey.material.widget.EditText;
 
 import getresult.example.asus.nottspark.R;
@@ -18,7 +20,7 @@ public class UserProfileFragment extends Fragment {
     private EditText profileName, profileEmail, profileContact;
     private Spinner vehicleSpinner;
     private Button editProfile, addVehicle;
-
+    private User user;
 
     public UserProfileFragment() {
 
@@ -26,7 +28,16 @@ public class UserProfileFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);user = MainActivity.getUserinfo();
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            user = (User) (bundle.getSerializable("userinfo"));
+        }
     }
 
     @Override

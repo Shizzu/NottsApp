@@ -22,48 +22,36 @@ public class UserHistoryAdapter extends RecyclerView.Adapter<UserHistoryAdapter.
 
     private Leaver[] mDataSet;
 
-    /**
-     * Initialize the dataset of the Adapter.
-     *
-     * @param dataSet String[] containing the data to populate views to be used by RecyclerView.
-     */
     public UserHistoryAdapter(Leaver[] dataSet) {
         mDataSet = dataSet;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        // Create a new view
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.row_in_history, viewGroup, false);
 
         return new ViewHolder(v);
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "Element " + position + " set.");
-
         Context context = viewHolder.getImageView().getContext();
         viewHolder.gettvPlaceName().setText(mDataSet[position].getUserID().getCar().getCarPlate());
         viewHolder.gettvPlaceTime().setText(mDataSet[position].getLeavingTime());
-
+        viewHolder.gettvPlaceDate().setText(mDataSet[position].getLeavingDate());
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mDataSet.length;
     }
 
-    /**
-     * Provide a reference to the type of views that you are using (custom ViewHolder)
-     */
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView tvPlaceName;
         private final TextView tvPlaceTime;
+        private final TextView tvPlaceDate;
         private final ImageView imageView;
 
         public ViewHolder(View v) {
@@ -77,6 +65,7 @@ public class UserHistoryAdapter extends RecyclerView.Adapter<UserHistoryAdapter.
             });
             tvPlaceName = (TextView) v.findViewById(R.id.placeName);
             tvPlaceTime = (TextView) v.findViewById(R.id.placeTime);
+            tvPlaceDate = (TextView) v.findViewById(R.id.placeDate);
             imageView = (ImageView) v.findViewById(R.id.placeImage);
         }
 
@@ -86,6 +75,10 @@ public class UserHistoryAdapter extends RecyclerView.Adapter<UserHistoryAdapter.
 
         public TextView gettvPlaceTime() {
             return tvPlaceTime;
+        }
+
+        public TextView gettvPlaceDate() {
+            return tvPlaceDate;
         }
 
         public ImageView getImageView() {

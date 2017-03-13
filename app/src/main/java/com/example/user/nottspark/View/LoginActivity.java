@@ -3,28 +3,17 @@ package com.example.user.nottspark.View;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toolbar;
 
-import com.example.user.nottspark.Database.NottsParkDatabase;
-import com.example.user.nottspark.Database.carLocalDB;
-import com.example.user.nottspark.Model.Car;
 import com.example.user.nottspark.Model.User;
 import com.example.user.nottspark.View.ViewerPage.MainActivity;
 
-import java.util.List;
-import java.util.Objects;
-
 import getresult.example.asus.nottspark.R;
 
-/**
- * A login screen that offers login via email/password.
- */
 public class LoginActivity extends AppCompatActivity {
 
     public User current_user;
@@ -80,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
 //                for (User user : users) {
 //                    if ((Objects.equals(user.getUserUsername(), temp_username) && (Objects.equals(user.getUserPassword(), temp_password)))) {
 //                        current_user = db.getUser(user.getUserID());
-                        attemptLogin(view);
+                attemptLogin(view);
 //                    }
 //                }
 
