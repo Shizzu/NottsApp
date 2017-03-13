@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.user.nottspark.Model.User;
-import com.example.user.nottspark.View.AddVehicleActivity;
+import com.example.user.nottspark.View.EditProfileActivity;
 import com.example.user.nottspark.View.ViewerPage.MainActivity;
 import com.rey.material.widget.EditText;
 
@@ -19,7 +19,7 @@ import getresult.example.asus.nottspark.R;
 public class UserProfileFragment extends Fragment {
     private EditText profileName, profileEmail, profileContact;
     private Spinner vehicleSpinner;
-    private Button editProfile, addVehicle;
+    private Button editProfile;
     private User user;
 
     public UserProfileFragment() {
@@ -30,15 +30,6 @@ public class UserProfileFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         user = MainActivity.getUserinfo();
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            user = (User) (bundle.getSerializable("userinfo"));
-        }
     }
 
     @Override
@@ -53,19 +44,19 @@ public class UserProfileFragment extends Fragment {
         profileEmail.setKeyListener(null);
         profileContact.setKeyListener(null);
 
-        addVehicle = (Button) view.findViewById(R.id.addVehicle);
-        addVehicle.setOnClickListener(new View.OnClickListener() {
+        editProfile = (Button) view.findViewById(R.id.editProfile);
+        editProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addVehicle();
+                editProfile();
 
             }
         });
         return view;
     }
 
-    private void addVehicle() {
-        Intent intent = new Intent(getActivity(), AddVehicleActivity.class);
+    private void editProfile() {
+        Intent intent = new Intent(getActivity(), EditProfileActivity.class);
         getActivity().startActivity(intent);
     }
 }

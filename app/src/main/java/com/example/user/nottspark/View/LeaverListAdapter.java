@@ -29,7 +29,7 @@ public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         View v = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.row_in_history, viewGroup, false);
+                .inflate(R.layout.row_in_parker, viewGroup, false);
 
         return new ViewHolder(v);
     }
@@ -38,9 +38,8 @@ public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.Vi
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
         Log.d(TAG, "Element " + position + " set.");
         Context context = viewHolder.getImageView().getContext();
-        viewHolder.gettvPlaceName().setText(mDataSet[position].getUserID().getCar().getCarPlate());
-        viewHolder.gettvPlaceTime().setText(mDataSet[position].getLeavingTime());
-        viewHolder.gettvPlaceDate().setText(mDataSet[position].getLeavingDate());
+        viewHolder.gettvPlaceName().setText("Leaver: "+mDataSet[position].getLocation().getBuildingName());
+        viewHolder.gettvLeaverName().setText("Location: "+mDataSet[position].getUserID().getUserName());
     }
 
     @Override
@@ -50,9 +49,8 @@ public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView tvPlaceName;
-        private final TextView tvPlaceTime;
-        private final TextView tvPlaceDate;
         private final ImageView imageView;
+        private final TextView tvLeaverName;
 
         public ViewHolder(View v) {
             super(v);
@@ -64,8 +62,7 @@ public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.Vi
                 }
             });
             tvPlaceName = (TextView) v.findViewById(R.id.placeName);
-            tvPlaceTime = (TextView) v.findViewById(R.id.placeTime);
-            tvPlaceDate = (TextView) v.findViewById(R.id.placeDate);
+            tvLeaverName = (TextView) v.findViewById(R.id.leaverName);
             imageView = (ImageView) v.findViewById(R.id.placeImage);
         }
 
@@ -73,12 +70,8 @@ public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.Vi
             return tvPlaceName;
         }
 
-        public TextView gettvPlaceTime() {
-            return tvPlaceTime;
-        }
-
-        public TextView gettvPlaceDate() {
-            return tvPlaceDate;
+        public TextView gettvLeaverName() {
+            return tvLeaverName;
         }
 
         public ImageView getImageView() {

@@ -29,8 +29,8 @@
                 android:value="com.example.user.nottspark.View.LoginActivity" />
         </activity>
         <activity
-            android:name="com.example.user.nottspark.View.AddVehicleActivity"
-            android:label="Add Vehicle"
+            android:name="com.example.user.nottspark.View.EditProfileActivity"
+            android:label="Edit Profile"
             android:parentActivityName="com.example.user.nottspark.View.ViewerPage.MainActivity"
             android:theme="@style/AppTheme.ActionBar">
             <meta-data

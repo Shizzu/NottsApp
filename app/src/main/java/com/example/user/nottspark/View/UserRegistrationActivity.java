@@ -43,7 +43,7 @@ public class UserRegistrationActivity extends AppCompatActivity {
         mCarModel = (EditText) findViewById(R.id.carModelReg);
         mCarPlate = (EditText) findViewById(R.id.carPlateReg);
 
-        Button mSignUp = (Button) findViewById(R.id.addUser);
+        Button mSignUp = (Button) findViewById(R.id.btnAddUser);
         mSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

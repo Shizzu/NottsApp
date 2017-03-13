@@ -15,52 +15,26 @@
         android:scaleType="centerCrop"
         card_view:srcCompat="@drawable/bbparking" />
 
-    <!-- Used for the ripple effect on touch -->
-    <LinearLayout
-        android:id="@+id/mainHolder"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?android:selectableItemBackground"
-        android:orientation="horizontal" />
-
     <LinearLayout
         android:id="@+id/placeNameHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/bluegrey50"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/placeName"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@android:color/black" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/placeTime"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/leaverName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:textColor="@android:color/black" />
 
             <TextView
-                android:id="@+id/placeDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/placeName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:textColor="@android:color/black" />
-        </LinearLayout>
 
     </LinearLayout>
 

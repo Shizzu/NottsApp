@@ -1,64 +1,74 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:padding="10dp">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent" />
+</LinearLayout>
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:padding="10dp">-->
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Building"
-            android:textColor="@color/primarycolor"
-            android:textStyle="normal|bold" />
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
 
-        <EditText
-            android:id="@+id/parkerBuilding"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="For example: Blue Building" />
+        <!--<TextView-->
+            <!--android:id="@+id/textView6"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Building"-->
+            <!--android:textColor="@color/primarycolor"-->
+            <!--android:textStyle="normal|bold" />-->
 
-        <EditText
-            android:id="@+id/parkerCarMake"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Make" />
+        <!--<EditText-->
+            <!--android:id="@+id/parkerBuilding"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="-10dp"-->
+            <!--android:hint="For example: Blue Building" />-->
 
-        <EditText
-            android:id="@+id/parkerCarModel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Model" />
+        <!--<EditText-->
+            <!--android:id="@+id/parkerCarMake"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="-10dp"-->
+            <!--android:hint="Car Make" />-->
 
-        <EditText
-            android:id="@+id/parkerCarPlate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Plate" />
+        <!--<EditText-->
+            <!--android:id="@+id/parkerCarModel"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="-10dp"-->
+            <!--android:hint="Car Model" />-->
 
-        <com.rey.material.widget.Button
-            android:id="@+id/btnSearchLeaver"
-            style="@style/Material.Drawable.Ripple.Touch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="5dp"
-            android:background="@color/primarycolor"
-            android:elevation="2dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Search Leaver"
-            android:textColor="@android:color/white"
-            app:rd_enable="true" />
-    </LinearLayout>
-</ScrollView>
+        <!--<EditText-->
+            <!--android:id="@+id/parkerCarPlate"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="-10dp"-->
+            <!--android:hint="Car Plate" />-->
+
+        <!--<com.rey.material.widget.Button-->
+            <!--android:id="@+id/btnSearchLeaver"-->
+            <!--style="@style/Material.Drawable.Ripple.Touch"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom|right"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:background="@color/primarycolor"-->
+            <!--android:elevation="2dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:text="Search Leaver"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--app:rd_enable="true" />-->
+    <!--</LinearLayout>-->
+<!--</ScrollView>-->

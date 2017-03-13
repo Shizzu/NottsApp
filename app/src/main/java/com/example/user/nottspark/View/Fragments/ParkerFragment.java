@@ -39,15 +39,7 @@ public class ParkerFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         user = MainActivity.getUserinfo();
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        Bundle bundle = getArguments();
-        if (bundle != null) {
-            user = (User) (bundle.getSerializable("userinfo"));
-        }
+        initDataset();
     }
 
     @Override
@@ -75,6 +67,11 @@ public class ParkerFragment extends Fragment {
 //            }
 //        });
         return view;
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     private void initDataset() {
