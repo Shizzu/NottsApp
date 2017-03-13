@@ -24,28 +24,26 @@ import getresult.example.asus.nottspark.R;
 
 public class LeaverFragment extends Fragment {
 
+    OnHeadlineSelectedListener mCallback;
     private User user;
     private EditText new_building, new_desc;
     private Spinner new_vehicle;
     private FragmentActivity myContext;
-    OnHeadlineSelectedListener mCallback;
 
-    // Container Activity must implement this interface
-    public interface OnHeadlineSelectedListener {
-        public void onArticleSelected(int position);
-    }
     public LeaverFragment() {
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);user = MainActivity.getUserinfo();
+        super.onCreate(savedInstanceState);
+        user = MainActivity.getUserinfo();
     }
+
     @Override
     public void onAttach(Activity activity) {
         myContext = (FragmentActivity) activity;
         super.onAttach(activity);
     }
-
 
     public void showTimePickerDialog() {
         DialogFragment newFragment = new TimePickerFragment();
@@ -88,6 +86,11 @@ public class LeaverFragment extends Fragment {
 //            }
 //        });
         return view;
+    }
+
+    // Container Activity must implement this interface
+    public interface OnHeadlineSelectedListener {
+        public void onArticleSelected(int position);
     }
 
     public static class TimePickerFragment extends DialogFragment

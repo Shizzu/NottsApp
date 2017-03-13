@@ -34,10 +34,13 @@ public class ParkerFragment extends Fragment {
 
     public ParkerFragment() {
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);user = MainActivity.getUserinfo();
+        super.onCreate(savedInstanceState);
+        user = MainActivity.getUserinfo();
     }
+
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -73,6 +76,7 @@ public class ParkerFragment extends Fragment {
 //        });
         return view;
     }
+
     private void initDataset() {
         mDataset = new Leaver[DATASET_COUNT];
         Date date = new Date();

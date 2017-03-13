@@ -13,14 +13,21 @@ import android.view.MenuItem;
 import com.example.user.nottspark.Model.Car;
 import com.example.user.nottspark.Model.User;
 import com.example.user.nottspark.View.Dialogs.LogOutDialog;
-import com.example.user.nottspark.View.Fragments.LeaverFragment;
-import com.example.user.nottspark.View.Fragments.ParkerFragment;
 
 import getresult.example.asus.nottspark.R;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
     public static Car car1 = new Car(6001, "Proton", "Saga", "CAD 2035");//testing please delete
     public static User userinfo = new User(20002, "admin2012", "Admin", "0124547896", "admin@ne.com", car1, "05/01/2017 3:00pm", "Student", "root");//testing please delete
+
+    public static User getUserinfo() {
+        return userinfo;
+    }
+
+    public static void setUserinfo(User userinfo) {
+        userinfo = userinfo;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -72,13 +79,5 @@ public class MainActivity extends AppCompatActivity{
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public static User getUserinfo() {
-        return userinfo;
-    }
-
-    public static void setUserinfo(User userinfo) {
-        userinfo = userinfo;
     }
 }
