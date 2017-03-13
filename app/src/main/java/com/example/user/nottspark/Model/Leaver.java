@@ -1,13 +1,12 @@
 package com.example.user.nottspark.Model;
 
-import java.security.Timestamp;
-
 /**
  * Created by user on 27/2/2017.
  */
 
 public class Leaver {
     private int leaverID;
+    private String leavingDate;
     private String leavingTime;
     private User userID;
     private SpecificLocation location;
@@ -16,8 +15,9 @@ public class Leaver {
     public Leaver() {
     }
 
-    public Leaver(int leaverID, String leavingTime, User userID, SpecificLocation location, String status) {
+    public Leaver(int leaverID, String leavingDate, String leavingTime, User userID, SpecificLocation location, String status) {
         this.leaverID = leaverID;
+        this.leavingDate = leavingDate;
         this.leavingTime = leavingTime;
         this.userID = userID;
         this.location = location;
@@ -30,6 +30,14 @@ public class Leaver {
 
     public void setLeaverID(int leaverID) {
         this.leaverID = leaverID;
+    }
+
+    public String getLeavingDate() {
+        return leavingDate;
+    }
+
+    public void setLeavingDate(String leavingDate) {
+        this.leavingDate = leavingDate;
     }
 
     public String getLeavingTime() {

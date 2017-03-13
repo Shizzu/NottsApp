@@ -3,7 +3,6 @@ package com.example.user.nottspark.View.ViewerPage;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 
 import com.example.user.nottspark.Model.Car;
 import com.example.user.nottspark.Model.User;
@@ -32,8 +31,8 @@ public class ViewerPageAdapter extends FragmentStatePagerAdapter {
                 LeaverFragment leaverFragment = new LeaverFragment();
                 return leaverFragment;
             case 2:
-                Fragment fragment = UserHistoryFragment.newInstance(user1);
-                return fragment;
+                UserHistoryFragment userHistoryFragment = new UserHistoryFragment();
+                return userHistoryFragment;
             case 3:
                 UserProfileFragment userProfileFragment = new UserProfileFragment();
                 return userProfileFragment;
