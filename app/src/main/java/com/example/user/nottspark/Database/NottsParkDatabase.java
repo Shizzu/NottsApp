@@ -127,9 +127,10 @@ public class NottsParkDatabase extends SQLiteOpenHelper {
                 new String[]{String.valueOf(id)}, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
-        User user = new User(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
-                cursor.getString(5), cursor.getString(6));
+//        User user = new User(Integer.parseInt(cursor.getString(0)),
+//                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
+//                cursor.getString(5), cursor.getString(6));
+        User user = null;//Vivian doing testing please delete this
         return user;
     }
 
@@ -164,13 +165,14 @@ public class NottsParkDatabase extends SQLiteOpenHelper {
     public void addLeaver(Leaver leaver) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        ContentValues values = new ContentValues();
-        //values.put(KEY_L_TIME, leaver.getLeavingTime()); //  Time
-        values.put(KEY_L_USER_ID, leaver.getUserID()); // User ID
-        values.put(KEY_L_LOCATION, leaver.getLocation()); //  Location
-        values.put(KEY_L_STATUS, leaver.getStatus()); // Status
+//        ContentValues values = new ContentValues();
+//        //values.put(KEY_L_TIME, leaver.getLeavingTime()); //  Time
+//        values.put(KEY_L_USER_ID, leaver.getUserID()); // User ID
+//        values.put(KEY_L_LOCATION, leaver.getLocation()); //  Location
+//        values.put(KEY_L_STATUS, leaver.getStatus()); // Status
 
-        db.insert(TABLE_LEAVER, null, values);
+//        db.insert(TABLE_LEAVER, null, values);
+        //vivian doing testing please uncomment
         db.close(); // Closing database connection
     }
 

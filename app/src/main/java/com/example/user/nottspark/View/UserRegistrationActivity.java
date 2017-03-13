@@ -63,8 +63,9 @@ public class UserRegistrationActivity extends AppCompatActivity {
                 String new_car_plate = mCarPlate.getText().toString();
 
                 if (Objects.equals(new_pw, new_pw_verify)) {
-                    db.addUser(new User(1,new_username, new_name, new_contact, new_email, new_accType, new_pw));
-                    db_car.addCar(new Car(1,new_car_make, new_car_model, new_car_plate));
+//                    db.addUser(new User(1,new_username, new_name, new_contact, new_email, new_accType, new_pw));
+//                    db_car.addCar(new Car(1,new_car_make, new_car_model, new_car_plate));
+                    //vivian doing testing please uncomment
                 }
             }
         });

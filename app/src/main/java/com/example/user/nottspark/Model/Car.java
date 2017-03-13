@@ -5,20 +5,19 @@ package com.example.user.nottspark.Model;
  */
 
 public class Car {
-    public static int ttlCar;
     private int carID;
     private String carMake;
     private String carModel;
     private String carPlate;
-
-    public Car() {
-    }
 
     public Car(int carID, String carMake, String carModel, String carPlate) {
         this.carID = carID;
         this.carMake = carMake;
         this.carModel = carModel;
         this.carPlate = carPlate;
+    }
+
+    public Car() {
     }
 
     public int getCarID() {

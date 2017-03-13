@@ -6,18 +6,28 @@ package com.example.user.nottspark.Model;
 
 public class SpecificLocation {
     private int specLocID;
-    private Building buildingID;
-    private String row;
+    private String buildingName;
+    private String buildingColor;
     private String description;
+    private String fileURL;
 
     public SpecificLocation() {
     }
 
-    public SpecificLocation(int specLocID, Building buildingID, String row, String description) {
+    public SpecificLocation(int specLocID, String buildingName, String buildingColor, String description, String fileURL) {
         this.specLocID = specLocID;
-        this.buildingID = buildingID;
-        this.row = row;
+        this.buildingName = buildingName;
+        this.buildingColor = buildingColor;
         this.description = description;
+        this.fileURL = fileURL;
+    }
+
+    public String getFileURL() {
+        return fileURL;
+    }
+
+    public void setFileURL(String fileURL) {
+        this.fileURL = fileURL;
     }
 
     public int getSpecLocID() {
@@ -28,20 +38,20 @@ public class SpecificLocation {
         this.specLocID = specLocID;
     }
 
-    public Building getBuildingID() {
-        return buildingID;
+    public String getBuildingName() {
+        return buildingName;
     }
 
-    public void setBuildingID(Building buildingID) {
-        this.buildingID = buildingID;
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
     }
 
-    public String getRow() {
-        return row;
+    public String getBuildingColor() {
+        return buildingColor;
     }
 
-    public void setRow(String row) {
-        this.row = row;
+    public void setBuildingColor(String buildingColor) {
+        this.buildingColor = buildingColor;
     }
 
     public String getDescription() {

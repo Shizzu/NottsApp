@@ -1,42 +1,35 @@
 package com.example.user.nottspark.Model;
 
+import java.io.Serializable;
 import java.security.Timestamp;
 import java.util.ArrayList;
 
 // Account (Credentials) and Profile (Account Holder's Information) Combined
-public class User {
-    public static int ttlUser;
+public class User implements Serializable {
     private int userID;
     private String userUsername;
     private String userName;
     private String userContactNum;
     private String userEmail;
-    private ArrayList<Car> carList;
-    private Timestamp registerDate;
+    private Car car;
+    private String registerDate;
     private String userAccountType;
     private String userPassword;
 
     public User() {
-        ttlUser++;
+
     }
 
-    public User(int userID, String userUsername, String userName, String userContactNum, String userEmail, String userAccountType, String userPassword) {
-        ttlUser++;
+    public User(int userID, String userUsername, String userName, String userContactNum, String userEmail, Car car, String registerDate, String userAccountType, String userPassword) {
         this.userID = userID;
         this.userUsername = userUsername;
         this.userName = userName;
         this.userContactNum = userContactNum;
         this.userEmail = userEmail;
+        this.car = car;
+        this.registerDate = registerDate;
         this.userAccountType = userAccountType;
         this.userPassword = userPassword;
-    }
-
-    public static int getTtlUser() {
-        return ttlUser;
-    }
-
-    public static void setTtlUser(int ttlUser) {
-        User.ttlUser = ttlUser;
     }
 
     public int getUserID() {
@@ -77,6 +70,22 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
+    }
+
+    public String getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(String registerDate) {
+        this.registerDate = registerDate;
     }
 
     public String getUserAccountType() {

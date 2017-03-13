@@ -99,31 +99,35 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="5dp"
             android:background="@color/colorPrimaryDark" />
+        <com.rey.material.widget.EditText
+            android:id="@+id/profileCarMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Car Make"
+            android:maxLines="1"
+            android:text="Proton"
+            app:et_labelEnable="true" />
 
-        <TextView
-            android:id="@+id/textView8"
+        <com.rey.material.widget.EditText
+            android:id="@+id/profileCarModel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Make"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
-        <TextView
-            android:id="@+id/textView9"
+            android:hint="Car Model"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:text="Saga"
+            app:et_labelEnable="true" />
+
+
+        <com.rey.material.widget.EditText
+            android:id="@+id/profileCarPlate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Model"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Car Plate"
-            android:textColor="@color/teal500"
-            android:textStyle="normal|bold" />
+            android:fontFamily="sans-serif"
+            android:hint="Car Plate"
+            android:inputType="text|number"
+            android:text="CAR 6882"
+            app:et_labelEnable="true" />
 
         <com.rey.material.widget.Button
             android:id="@+id/addVehicle"

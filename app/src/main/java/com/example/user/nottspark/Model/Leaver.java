@@ -8,20 +8,15 @@ import java.security.Timestamp;
 
 public class Leaver {
     private int leaverID;
-    /*
-    private Timestamp leavingTime;
+    private String leavingTime;
     private User userID;
     private SpecificLocation location;
-    */
-    private Timestamp leavingTime;
-    private int userID;
-    private String location;
     private String status;
 
     public Leaver() {
     }
 
-    public Leaver(int leaverID, Timestamp leavingTime, int userID, String location, String status) {
+    public Leaver(int leaverID, String leavingTime, User userID, SpecificLocation location, String status) {
         this.leaverID = leaverID;
         this.leavingTime = leavingTime;
         this.userID = userID;
@@ -37,27 +32,27 @@ public class Leaver {
         this.leaverID = leaverID;
     }
 
-    public Timestamp getLeavingTime() {
+    public String getLeavingTime() {
         return leavingTime;
     }
 
-    public void setLeavingTime(Timestamp leavingTime) {
+    public void setLeavingTime(String leavingTime) {
         this.leavingTime = leavingTime;
     }
 
-    public int getUserID() {
+    public User getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(User userID) {
         this.userID = userID;
     }
 
-    public String getLocation() {
+    public SpecificLocation getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(SpecificLocation location) {
         this.location = location;
     }
 
