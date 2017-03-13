@@ -17,12 +17,12 @@ import getresult.example.asus.nottspark.R;
 /**
  * Provide views to RecyclerView with data from mDataSet.
  */
-public class UserHistoryAdapter extends RecyclerView.Adapter<UserHistoryAdapter.ViewHolder> {
-    private static final String TAG = "UserHistoryAdapter";
+public class LeaverListAdapter extends RecyclerView.Adapter<LeaverListAdapter.ViewHolder> {
+    private static final String TAG = "LeaverListAdapter";
 
     private Leaver[] mDataSet;
 
-    public UserHistoryAdapter(Leaver[] dataSet) {
+    public LeaverListAdapter(Leaver[] dataSet) {
         mDataSet = dataSet;
     }
 

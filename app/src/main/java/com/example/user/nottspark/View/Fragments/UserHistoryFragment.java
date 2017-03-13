@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.example.user.nottspark.Model.Leaver;
 import com.example.user.nottspark.Model.SpecificLocation;
 import com.example.user.nottspark.Model.User;
-import com.example.user.nottspark.View.UserHistoryAdapter;
+import com.example.user.nottspark.View.LeaverListAdapter;
 import com.example.user.nottspark.View.ViewerPage.MainActivity;
 
 import java.text.SimpleDateFormat;
@@ -22,7 +22,7 @@ import getresult.example.asus.nottspark.R;
 public class UserHistoryFragment extends Fragment {
     private static final int DATASET_COUNT = 6;
     private RecyclerView mRecyclerView;
-    private UserHistoryAdapter mAdapter;
+    private LeaverListAdapter mAdapter;
     private Leaver[] mDataset;
     private User user;
 
@@ -45,7 +45,7 @@ public class UserHistoryFragment extends Fragment {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.scrollToPosition(((LinearLayoutManager) mRecyclerView.getLayoutManager()).findFirstCompletelyVisibleItemPosition());
-        mAdapter = new UserHistoryAdapter(mDataset);
+        mAdapter = new LeaverListAdapter(mDataset);
         mRecyclerView.setAdapter(mAdapter);
         return view;
     }
