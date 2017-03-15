@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1">
 
 
         <TextView
@@ -18,33 +19,24 @@
             android:textColor="@color/teal500"
             android:textStyle="normal|bold" />
 
-        <EditText
+        <Spinner
             android:id="@+id/leaverBuilding"
+            style="@style/Material.Widget.Spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="For example: Blue Building" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:dropDownWidth="match_parent"
+            android:entries="@array/acc_type_array"
+            android:fontFamily="sans-serif"
+            android:spinnerMode="dropdown"
+            android:textSize="18sp"  />
 
-        <EditText
-            android:id="@+id/leaverCarMake"
+        <ImageView
+            android:id="@+id/locationfromspinner"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Make" />
-
-        <EditText
-            android:id="@+id/leaverCarModel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Model" />
-
-        <EditText
-            android:id="@+id/leaverCarPlate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-10dp"
-            android:hint="Car Plate" />
+            android:layout_height="379dp"
+            app:srcCompat="@drawable/bbparking" />
 
         <View
             android:layout_width="fill_parent"

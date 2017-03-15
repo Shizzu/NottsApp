@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.user.nottspark.View.Fragments.LeaverFragment;
+import com.example.user.nottspark.View.Fragments.MapDisplay;
 import com.example.user.nottspark.View.Fragments.ParkerFragment;
 import com.example.user.nottspark.View.Fragments.UserHistoryFragment;
 import com.example.user.nottspark.View.Fragments.UserProfileFragment;
@@ -21,18 +22,20 @@ public class ViewerPageAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-
         switch (position) {
             case 0:
+                MapDisplay mapDisplay = new MapDisplay();
+                return mapDisplay;
+            case 1:
                 ParkerFragment parkerFragment = new ParkerFragment();
                 return parkerFragment;
-            case 1:
+            case 2:
                 LeaverFragment leaverFragment = new LeaverFragment();
                 return leaverFragment;
-            case 2:
+            case 3:
                 UserHistoryFragment userHistoryFragment = new UserHistoryFragment();
                 return userHistoryFragment;
-            case 3:
+            case 4:
                 UserProfileFragment userProfileFragment = new UserProfileFragment();
                 return userProfileFragment;
             default:
